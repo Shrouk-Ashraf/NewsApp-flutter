@@ -17,6 +17,7 @@ This application uses many important features in flutter as:
 2) Dio package.
 3) FutureBuilder Widget.
 4) Async programming.
+5) WebView Package.
 
 You can see the video below
 -

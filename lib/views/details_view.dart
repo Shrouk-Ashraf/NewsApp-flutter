@@ -7,7 +7,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 class DetailsView extends StatelessWidget {
 
-  const DetailsView({required this.article, required this.controller});
+  const DetailsView({super.key, required this.article, required this.controller});
 
   final WebViewController controller;
   final ArticleModel article;
@@ -17,7 +17,7 @@ class DetailsView extends StatelessWidget {
 
     return Scaffold(
           body:  SafeArea(
-              child: WebController(controller: this.controller, article: this.article,)),
+              child: WebController(controller: controller, article: article,)),
 
       );
   }

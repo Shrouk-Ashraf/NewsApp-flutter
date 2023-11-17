@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(child: CategoryListView(),),
             SliverToBoxAdapter(child: SizedBox(height: 20,),),
-            NewsListBuilder(category: "gaza",)
+            NewsListBuilder(category: "general",)
           ],
         ),
       )

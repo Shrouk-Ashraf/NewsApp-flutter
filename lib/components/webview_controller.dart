@@ -18,6 +18,7 @@ class WebController extends StatefulWidget {
 class _WebControllerState extends State<WebController> {
 
   bool isLoading = true;
+  bool isError= false;
 
   @override
   void initState() {
@@ -42,23 +43,26 @@ class _WebControllerState extends State<WebController> {
             });
           },
           onWebResourceError: (WebResourceError error) {
-            print ("ERROR");
+            isError = true;
+            throw Exception(error.description);
           },
           onNavigationRequest: (NavigationRequest request) {
             return NavigationDecision.navigate;
           },
         ),
       )
-      ..loadRequest(Uri.parse(widget.article.url!));
+      ..loadRequest(
+          Uri.parse(widget.article.url!)
+      );
   }
 
 
   @override
   Widget build(BuildContext context) {
     return isLoading?
-      Center(
+      const Center(
         child: CircularProgressIndicator(),)
-    : WebViewWidget(controller:  widget.controller,);
+    :isError? const Center(child: Text("OOPs there is an error try again later")) : WebViewWidget(controller:  widget.controller,);
   }
 }
 

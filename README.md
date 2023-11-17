@@ -21,7 +21,6 @@ This application uses many important features in flutter as:
 
 You can see the video below
 -
-https://github.com/Shrouk-Ashraf/NewsApp-flutter/assets/68174886/5e888742-ab6d-4b36-8eaf-8298508dcd1f
-
+https://github.com/Shrouk-Ashraf/NewsApp-flutter/assets/68174886/b572dbae-d713-455e-a472-b2edac41619c
 
 
